@@ -1,0 +1,81 @@
+.header{
+    height: 0px;
+    &.active-header{
+        background-color: #202020 !important;
+        position: fixed;
+        width: 100%;
+        top:0;
+        height: 100px;
+        z-index: 101;
+        transition: 0.5s ease-in-out;
+        nav{
+            position: static;
+        }
+        
+    }
+    nav{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        overflow: hidden;
+        height: 100px;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        transition: none;
+        background: transparent;
+        .container{
+            max-width: 1140px;
+           
+        }
+        .num{
+            a{
+                text-decoration: none;
+                color:#fff;
+            }
+        }
+        .navbar-coll{
+            ul{
+                li{
+                    font-size: 16px;
+                    color: #ffffff;
+                    text-align: center;
+                    padding: 0.4rem 1.6rem;
+                    font-weight: normal;
+                    text-transform: uppercase;
+                    
+                    a{
+                        text-decoration: none;
+                        color:#fff;
+                        padding: 0;
+                        &::before{
+                            content: '';
+                            position: relative;
+                            width: 50%;
+                            margin: 0 auto;
+                            display: table;
+                            height: 3px;
+                            border-radius: 2px;
+                            bottom: -32px;
+                            background-color: #fff;
+                            visibility: hidden;
+                            opacity: 0;
+                            transform:translateX(0);
+                             transition: .3s ease-in-out;
+
+                        }
+                        &:hover{
+                            &::before{
+                                width: 100%;
+                                visibility: visible;
+                                opacity: 1;
+                                transform:translateX(1)
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+    }
+}
